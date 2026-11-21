@@ -78,7 +78,7 @@ The RTX 4050 is a useful target for Balanced, High, and Ultra, while Lite skips 
 
 ## Validation
 
-The official `horizon-shader` CLI was built from the baseline above with a minimal standalone workspace, Rust 1.100.0 (Windows GNU), and the dependency lockfile in `validation/checker-Cargo.lock`. Upstream Rust source is kept separately under ignored `.tools/upstream/`, with its original licence, and is not part of the shader distribution. The shader code itself is MIT licensed.
+The official `horizon-shader` CLI was built from the baseline above with a minimal standalone workspace, Rust 1.100.0 (Windows GNU), and the dependency lockfile in `validation/checker-Cargo.lock`. Upstream Rust source is kept separately under ignored `.tools/upstream/`, with its original licence, and is not part of the shader distribution. The shader code itself is licensed under **All Rights Reserved** (personal use and modification permitted; no redistribution, no commercial use, and showcase attribution required — see [LICENSE](LICENSE)).
 
 Run on Windows with Python 3.11+ and the official checker:
 

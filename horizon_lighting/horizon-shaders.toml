@@ -5,7 +5,7 @@ version = "0.7.8"
 api = "0.2"
 description = "Raster-only Horizon shader pack featuring golden-hour sunlight, volumetric clouds, directional sky and haze, waving foliage, colored volumetric and dynamic block lighting, planar water mirror and SSR, wet and polished surfaces, custom rain and snow, bloom, and four quality presets."
 authors = ["coke"]
-license = "MIT"
+license = "All Rights Reserved"
 shared = ["common.wgsl"]
 
 [frame]

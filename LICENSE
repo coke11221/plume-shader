@@ -1,21 +1,38 @@
-MIT License
+Plume Shader License (All Rights Reserved)
+Copyright (c) 2026 coke (coke11221)
+Official Source: https://github.com/coke11221/plume-shader
 
-Copyright (c) 2026 Horizon Lighting contributors
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Ownership
+   Plume Shader, including all shader source code, configuration files, textures,
+   and packaged archives, is the intellectual property of coke (coke11221). You
+   may not claim ownership or authorship of Plume Shader or any part of it.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. Permitted Personal Use and Modification
+   You are permitted to download, install, use, and modify Plume Shader strictly
+   for your own personal, non-commercial use.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. No Redistribution or Republishing
+   You may not redistribute, re-upload, mirror, bundle (including in modpacks,
+   shader compilations, or server downloads), or republish Plume Shader—whether
+   original or modified, in whole or in part—on any website, launcher, or
+   platform without explicit prior written permission from the author.
+
+4. No Commercial Use
+   You may not sell, license, monetize, or otherwise use Plume Shader or any
+   modified or derivative version of it for commercial gain or profit.
+
+5. Showcasing and Attribution
+   You may showcase Plume Shader in videos, livestreams, screenshots, reviews,
+   or articles (including monetized media), provided that you clearly credit
+   "Plume Shader by coke" and include a visible link back to the official
+   source: https://github.com/coke11221/plume-shader
+
+6. Disclaimer
+   THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+   THE SOFTWARE.

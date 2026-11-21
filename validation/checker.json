@@ -7,7 +7,7 @@
       "id": "plume_shader",
       "version": "0.7.8",
       "api": "0.2",
-      "sha256": "42f171808b276ea821bd4cbe4826ad0799287af0ac3ad73fc413e3832e7f2be7",
+      "sha256": "44e6162d33ecc75ed01e2fb656e74bc14aa0ab0491a3c39f86bebd4f472ff775",
       "stages": [
         {
           "stage": "sky",
@@ -116,7 +116,7 @@
       "id": "plume_shader",
       "version": "0.7.8",
       "api": "0.2",
-      "sha256": "65015f530c58f84f779d4b6bc904cc853b09dbde8de07cc5d2cd102d181637d8",
+      "sha256": "23c3cc3fa9972dfb15ec7c0e9dc8b63956b338ce8ec186db83a0af85e6e32b06",
       "stages": [
         {
           "stage": "sky",
@@ -225,7 +225,7 @@
       "id": "plume_shader",
       "version": "0.7.8",
       "api": "0.2",
-      "sha256": "2691c336b2f58f4ec790926367cd656277405fe242039e754c353668e46ce570",
+      "sha256": "9b36cb2210b1ba1fd0f8c57cf19f9a3002084bdde79dbe765e7b1a64f9189396",
       "stages": [
         {
           "stage": "sky",
@@ -334,7 +334,7 @@
       "id": "plume_shader",
       "version": "0.7.8",
       "api": "0.2",
-      "sha256": "be7a9e318840289ea0e1eea90b79484004c15eb6f28cc49a29e38f506cbedd65",
+      "sha256": "d3b0735d0564a9cdaa02f832fd63c579267d08619be4f5c352738551ce53f1aa",
       "stages": [
         {
           "stage": "sky",
@@ -443,7 +443,7 @@
       "id": "plume_shader",
       "version": "0.7.8",
       "api": "0.2",
-      "sha256": "9028c038912c4d9df471829b94e24ae9719bbc80a303224bc53bed5b0a856306",
+      "sha256": "0044957c263a47fcbc0140cecd008d2d40e3e99cf00a097bd6f9de70a274ff8d",
       "stages": [
         {
           "stage": "sky",
@@ -552,7 +552,7 @@
       "id": "plume_shader",
       "version": "0.7.8",
       "api": "0.2",
-      "sha256": "42f171808b276ea821bd4cbe4826ad0799287af0ac3ad73fc413e3832e7f2be7",
+      "sha256": "44e6162d33ecc75ed01e2fb656e74bc14aa0ab0491a3c39f86bebd4f472ff775",
       "stages": [
         {
           "stage": "sky",
