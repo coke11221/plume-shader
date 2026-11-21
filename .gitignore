@@ -11,3 +11,7 @@ validation/*.json
 validation/*.md
 validation/*.txt
 !validation/checker.json
+docs/
+TUNING.md
+Horizon_Lighting_Updated_Roadmap.md
+Horizon_Lighting_Interactive_Roadmap.html
