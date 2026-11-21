@@ -1,0 +1,308 @@
+schema = 1
+id = "plume_shader"
+name = "Plume Shader"
+version = "0.7.8"
+api = "0.2"
+description = "Raster-only Horizon shader pack featuring golden-hour sunlight, volumetric clouds, directional sky and haze, waving foliage, colored volumetric and dynamic block lighting, planar water mirror and SSR, wet and polished surfaces, custom rain and snow, bloom, and four quality presets."
+authors = ["coke"]
+license = "MIT"
+shared = ["common.wgsl"]
+
+[frame]
+blend = "linear"
+fog = "pack"
+
+[sky]
+file = "sky.wgsl"
+name = "Directional sky"
+clouds = false
+sun = false
+
+[material]
+file = "material.wgsl"
+files = ["shadow.wgsl", "gloss.wgsl", "fog.wgsl", "lighting.wgsl", "water.wgsl"]
+name = "Terrain and water"
+coverage = "pack"
+
+[vertex]
+file = "vertex.wgsl"
+name = "Foliage wind"
+
+[weather]
+file = "weather.wgsl"
+name = "Rain and snow"
+
+[entity]
+file = "entity.wgsl"
+files = ["shadow.wgsl", "gloss.wgsl", "fog.wgsl", "lighting.wgsl"]
+name = "Entity lighting"
+
+[shadow]
+resolution = 2048
+distance = 96.0
+
+[reflection]
+
+[[textures]]
+id = "water_normal"
+file = "water-normal.png"
+filter = "linear"
+wrap = "repeat"
+
+[[textures]]
+id = "cloud_noise"
+file = "cloud-noise.png"
+filter = "linear"
+wrap = "repeat"
+
+[[materials]]
+id = 10
+sprites = ["block/gold_block", "block/iron_block", "block/netherite_block", "block/copper_block", "block/cut_copper*", "block/chiseled_copper"]
+
+[[materials]]
+id = 20
+sprites = ["block/polished_*", "block/smooth_stone", "block/quartz_block*", "block/quartz_pillar*", "block/quartz_bricks", "block/*_glazed_terracotta", "block/diamond_block", "block/emerald_block"]
+
+[[materials]]
+id = 30
+sprites = ["block/glass", "block/*_stained_glass", "block/tinted_glass"]
+
+[[materials]]
+id = 40
+sprites = [
+    "block/grass", "block/short_grass", "block/tall_grass_bottom",
+    "block/short_dry_grass", "block/tall_dry_grass*",
+    "block/fern", "block/large_fern_bottom",
+    "block/bush", "block/firefly_bush*", "block/dead_bush", "block/sweet_berry_bush_*",
+    "block/wildflowers*", "block/pink_petals*",
+    "block/dandelion", "block/golden_dandelion", "block/poppy", "block/blue_orchid",
+    "block/allium", "block/azure_bluet", "block/*_tulip", "block/oxeye_daisy",
+    "block/cornflower", "block/lily_of_the_valley", "block/wither_rose",
+    "block/torchflower*", "block/pitcher_crop_bottom*",
+    "block/closed_eyeblossom", "block/open_eyeblossom*", "block/cactus_flower",
+    "block/sunflower_bottom", "block/lilac_bottom", "block/rose_bush_bottom", "block/peony_bottom",
+    "block/*_sapling", "block/mangrove_propagule*", "block/azalea_plant", "block/potted_*_bush_plant",
+    "block/wheat_stage*", "block/carrots_stage*", "block/potatoes_stage*",
+    "block/beetroots_stage*", "block/melon_stem*", "block/pumpkin_stem*",
+    "block/attached_*", "block/nether_wart_stage*",
+    "block/big_dripleaf_stem", "block/small_dripleaf_stem_bottom",
+    "block/crimson_roots", "block/warped_roots", "block/nether_sprouts",
+    "block/crimson_fungus", "block/warped_fungus",
+    "block/red_mushroom", "block/brown_mushroom",
+]
+
+[[materials]]
+id = 41
+sprites = ["block/grass_block_*"]
+
+[[materials]]
+id = 42
+sprites = ["block/*_leaves"]
+
+[[materials]]
+id = 43
+sprites = [
+    "block/tall_grass_top", "block/large_fern_top",
+    "block/sunflower_top", "block/sunflower_front", "block/sunflower_back",
+    "block/lilac_top", "block/rose_bush_top", "block/peony_top",
+    "block/pitcher_crop_top*",
+    "block/big_dripleaf_top", "block/big_dripleaf_side", "block/big_dripleaf_tip",
+    "block/small_dripleaf_top", "block/small_dripleaf_side", "block/small_dripleaf_stem_top",
+]
+
+[[materials]]
+id = 44
+sprites = [
+    "block/vine", "block/cave_vines*", "block/hanging_roots",
+    "block/pale_hanging_moss*", "block/spore_blossom*",
+    "block/weeping_vines*", "block/twisting_vines*",
+    "block/sugar_cane",
+    "block/bamboo_large_leaves", "block/bamboo_small_leaves", "block/bamboo_singleleaf",
+    "block/bamboo_stage0",
+]
+
+[[materials]]
+id = 48
+sprites = ["block/bamboo_stalk"]
+
+[[materials]]
+id = 45
+sprites = [
+    "block/seagrass", "block/tall_seagrass_bottom",
+    "block/*_coral", "block/*_coral_fan",
+]
+
+[[materials]]
+id = 46
+sprites = [
+    "block/tall_seagrass_top", "block/kelp*",
+]
+
+[[materials]]
+id = 47
+sprites = [
+    "block/glow_lichen", "block/leaf_litter*", "block/pale_moss_carpet_side_*",
+    "block/lily_pad", "block/sea_pickle", "block/shelf_mushroom_stage*",
+]
+
+[[materials]]
+id = 60
+sprites = ["block/stone", "block/cobblestone", "block/mossy_cobblestone", "block/andesite", "block/diorite", "block/granite", "block/cobbled_deepslate", "block/deepslate", "block/deepslate_top", "block/stone_bricks", "block/mossy_stone_bricks"]
+
+[[materials]]
+id = 61
+sprites = ["block/dirt", "block/coarse_dirt", "block/rooted_dirt", "block/mud", "block/podzol_top", "block/podzol_side"]
+
+[[materials]]
+id = 50
+sprites = ["block/torch"]
+
+[[materials]]
+id = 51
+sprites = ["block/fire_*", "block/soul_fire_*"]
+
+[[tags]]
+id = "rooted_grass"
+sprites = [
+    "block/grass", "block/short_grass", "block/tall_grass_bottom",
+    "block/short_dry_grass", "block/tall_dry_grass",
+    "block/fern", "block/large_fern_bottom", "block/sugar_cane",
+    "block/bush", "block/firefly_bush", "block/firefly_bush_emissive",
+    "block/dead_bush", "block/sweet_berry_bush_*",
+    "block/dandelion", "block/golden_dandelion", "block/poppy", "block/blue_orchid",
+    "block/allium", "block/azure_bluet", "block/*_tulip", "block/oxeye_daisy",
+    "block/cornflower", "block/lily_of_the_valley", "block/wither_rose",
+    "block/torchflower", "block/closed_eyeblossom", "block/open_eyeblossom",
+    "block/open_eyeblossom_emissive", "block/cactus_flower",
+    "block/sunflower_bottom", "block/lilac_bottom", "block/rose_bush_bottom", "block/peony_bottom",
+    "block/*_sapling", "block/bamboo_stage0",
+    "block/wheat_stage*", "block/carrots_stage*",
+    "block/potatoes_stage*", "block/beetroots_stage*",
+    "block/crimson_roots", "block/warped_roots", "block/nether_sprouts",
+    "block/crimson_fungus", "block/warped_fungus", "block/red_mushroom", "block/brown_mushroom",
+    "block/seagrass", "block/tall_seagrass_bottom", "block/kelp", "block/sea_pickle",
+]
+
+[[lights]]
+blocks = ["torch", "wall_torch"]
+color = [1.06, 0.74, 0.34]
+
+[[lights]]
+blocks = ["lantern", "campfire"]
+color = [1.08, 0.68, 0.28]
+
+[[lights]]
+blocks = ["fire", "blaze_rod", "blaze_powder"]
+color = [1.10, 0.70, 0.28]
+
+[[lights]]
+blocks = ["lava", "lava_bucket", "magma_cream"]
+color = [1.28, 0.80, 0.40]
+
+[[lights]]
+blocks = ["*candle*", "magma_block", "furnace", "blast_furnace", "smoker"]
+color = [1.04, 0.58, 0.24]
+
+[[lights]]
+blocks = ["*copper_bulb*", "enchanting_table", "brown_mushroom", "brewing_stand"]
+color = [1.04, 0.68, 0.32]
+
+[[lights]]
+blocks = ["glowstone", "glowstone_dust", "shroomlight", "redstone_lamp", "jack_o_lantern", "ochre_froglight", "spectral_arrow", "torchflower", "open_eyeblossom", "firefly_bush"]
+color = [1.05, 0.84, 0.48]
+
+[[lights]]
+blocks = ["end_rod", "beacon", "conduit", "nether_star", "end_portal_frame"]
+color = [0.88, 0.96, 1.0]
+
+[[lights]]
+blocks = ["soul_torch", "soul_wall_torch", "soul_lantern", "soul_campfire", "soul_fire", "sea_lantern", "sculk_catalyst", "calibrated_sculk_sensor", "sculk_sensor", "sculk_shrieker", "prismarine_crystals", "glow_ink_sac", "glow_item_frame"]
+color = [0.50, 0.88, 1.0]
+
+[[lights]]
+blocks = ["copper_torch", "copper_wall_torch", "*copper_lantern*"]
+color = [0.46, 1.0, 0.62]
+
+[[lights]]
+blocks = ["redstone_torch", "redstone_wall_torch", "redstone_ore", "deepslate_redstone_ore"]
+color = [1.0, 0.26, 0.16]
+
+[[lights]]
+blocks = ["amethyst_cluster", "*amethyst_bud", "pearlescent_froglight", "crying_obsidian", "respawn_anchor", "ender_chest", "amethyst_shard", "end_crystal", "dragon_egg", "nether_portal"]
+color = [0.89, 0.65, 1.0]
+
+[[lights]]
+blocks = ["verdant_froglight", "glow_lichen", "glow_berries", "cave_vines*", "sea_pickle", "ender_eye"]
+color = [0.73, 1.0, 0.49]
+
+[[post]]
+file = "post/reflections.wgsl"
+files = ["gloss.wgsl"]
+name = "Glossy surface reflections"
+output = "surface_reflection"
+scale = 0.5
+
+[[post]]
+file = "post/atmosphere.wgsl"
+files = ["shadow.wgsl"]
+name = "Volumetric sunlight"
+output = "atmosphere"
+scale = 0.5
+
+[[post]]
+file = "post/contact_ao.wgsl"
+files = ["gloss.wgsl"]
+name = "Contact ambient occlusion"
+output = "contact_occlusion"
+scale = 0.5
+
+[[post]]
+file = "post/bloom_extract.wgsl"
+files = ["gloss.wgsl"]
+name = "Bloom extraction"
+output = "bloom_source"
+scale = 0.25
+
+[[post]]
+file = "post/bloom_horizontal.wgsl"
+files = ["post/bloom_blur.wgsl"]
+name = "Bloom horizontal"
+output = "bloom_horizontal"
+scale = 0.25
+
+[[post]]
+file = "post/bloom_vertical.wgsl"
+files = ["post/bloom_blur.wgsl"]
+name = "Bloom vertical"
+output = "bloom_vertical"
+scale = 0.25
+
+[[post]]
+file = "post/composite.wgsl"
+files = ["gloss.wgsl", "fog.wgsl"]
+name = "Atmosphere and bloom"
+
+[[post]]
+file = "post/antialias.wgsl"
+name = "Edge smoothing"
+
+[tonemap]
+file = "tonemap.wgsl"
+name = "Artistic grading and highlights"
+
+[[options]]
+id = "quality_preset"
+name = "Quality preset"
+type = "choice"
+values = ["Lite", "Balanced", "High", "Ultra"]
+default = "Balanced"
+description = "Lite: Maximum performance. Balanced: Recommended for most players. High: Enhanced visual quality. Ultra: Maximum visual fidelity with full-strength sun beams."
+
+[[pages]]
+id = "main"
+name = "Horizon Lighting"
+columns = 1
+items = ["quality_preset"]
+
+[budget]
+gpu_ms = 4.0

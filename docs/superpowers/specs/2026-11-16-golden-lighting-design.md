@@ -1,0 +1,25 @@
+# Golden lighting and procedural water iteration
+
+User-directed extension of the approved shader foundation, using the existing builder discretion over lighting curves, atmospheric coefficients and ripple equations. The user has tested decent performance and likes the existing lighting; this iteration gives it a distinctive golden-orange character and removes the visible vanilla water texture. They also request exact tuning locations in code at delivery.
+
+## Direction and approach
+
+Use warm direct light striking surfaces, with amber/orange low-angle sunlight and clearer, cooler ambient shadows. Keep a gentler warm tone at noon and retain cool night lighting. Increase direct/ambient contrast through the lighting equation rather than colouring every pixel orange. A broad screen tint was considered and rejected because it would tint interiors, shadows and torch light indiscriminately. The chosen approach follows the user's request for natural golden light on surfaces.
+
+Strengthen the existing half-resolution shadow-sampled atmosphere, especially at positive low sun elevations; avoid the current suppression of shafts near sunrise/sunset. Add a restrained sunset horizon glow through a sky stage. Retain shadow coverage guards, weather/dimension/medium checks, depth-aware upsampling and existing fog. Raise the default sample count modestly, keeping quality controls.
+
+Replace the entire water-colour branch with a procedural water interface: multi-scale directional wave normals, refracted opaque scene colour, depth-dependent absorption/scattering, Fresnel-weighted planar/sky reflections, and broader golden glints. Do not use water sprite RGB, biome sprite tint, or sprite alpha to colour/composite the water. Composite the background inside the water shader and return opaque coverage for that already-composited result; engine silhouette handling remains enabled for terrain. No new texture assets, ray tracing, water geometry displacement or client rebuild are required.
+
+The water mirror retains Horizon's single-plane limits. At other elevations/screen edges, fall back to analytic sky light; underwater/side surfaces retain procedural colour and refraction without using an invalid mirror. Avoid refracting foreground geometry across a shoreline. Preserve non-water materials, item/entity overlays, potion fallback and readable block light. Night and non-Overworld scenes must not acquire orange sun shafts.
+
+## Scope and delivery
+
+User additions: make the water clear rather than default blue, and add glossy surfaces that suggest realistic reflected/bounced light. Clear water now uses low, restrained absorption and greater transmission, retaining bottom detail. Add material rules for metals, polished stone/ceramic and glass; rough terrain remains matte. Use GGX direct-light highlights and optional half-resolution screen-space reflections on solid glossy terrain. Reflections read the visible scene and fall back to sky when the ray leaves the screen; they do not represent full global illumination. Add a small adjustable warm indirect fill. No extra texture pack is required; normal/roughness maps are optional future detail. One additional half-resolution post target/pass is within the existing pipeline budget. Document its visibility/roughness limitations and provide an off switch.
+
+Work in the existing shader folder and retain its id so the installed selection persists. Bump the pack to 0.2.0 and keep the stable 0.1.0 archive as a rollback. Stage and validate the new pack before installing it. Back up any replaced installed pack/settings; do not modify the client binary for this iteration.
+
+Add compact in-game controls for warmth, direct sunlight, shadow contrast, shaft strength/samples, wave strength/speed and water clarity. Defaults are builder choices, to be tuned against actual noon, sunrise, sunset and water captures. Put named palette/water constants near their helper functions. Deliver a tuning guide and exact clickable file/line references for the requested lighting and colour values.
+
+Validate using the pinned official checker (all backend translations and option extremes), real GPU tests of water sprite independence and the existing shade regressions, and isolated in-game visual comparisons. Compare frame cost in one fixed scene before/after when possible; do not infer whole-game performance from compilation. One fresh review after implementation checks water compositing, shoreline bounds, nighttime behaviour and texture independence.
+
+Review-driven implementation refinement: terrain fog is pack-owned, using API 0.2's combined public colour/start/end, so water can retain its already-fogged opaque background without a second fog blend. New reflection/scatter contributions receive surface fog. This approximates the engine's separate environmental/render-distance fog ranges; entity fog remains engine-owned. The final half-resolution reflection target stores unweighted radiance, with Fresnel/material colour applied per full-resolution receiver to avoid texture-dependent holes. Ray crossings are refined before residual/thickness validation.

@@ -1,0 +1,10 @@
+# Directional sky and terrain lighting plan
+
+Implement milestone 1 of the [Photon-inspired roadmap](2026-11-17-photon-inspired-roadmap.md) from 0.3.9. Use the existing analytic WGSL sky and daylight controls as the base. Keep this step compatible with the pinned API 0.2 client and the current raster pass chain.
+
+- [x] Capture the 0.3.9 baseline in a copy of `GoldenLab`. Use a fixed camera and weather for the noon, sunset, and night views. Use a roofed interior to check that low skylight still suppresses the fill. Record the same views with the new archive.
+- [x] Add a GPU regression in `tests/test_gpu_adapters.py` exercising the production `shade_surface` with direct light suppressed. Verify a neutral upward face gets brighter, bluer skylight than a downward face, and show the 0.3.9 shader fails this check. Exercise weather and the visible sky with the same production code.
+- [x] Extend `common.wgsl` with one directional Overworld sky model. Use the existing solar color and weather for the warm horizon, blend horizon and zenith according to elevation, and preserve a smooth day-to-night transition. In `sky.wgsl` keep the engine backdrop for other dimensions and immersion. In `lighting.wgsl`, use the analytic dome to tint the ambient fill by face orientation. Keep the existing skylight multiplier, contrast control, direct sun balance, and warm bounce.
+- [x] Tune toward natural greens as requested during implementation. In `material.wgsl`, grade only green pixels of biome-tinted Overworld grass, ferns, and leaves. Add a leaf material selector in the manifest and soften the direct sun tint in `lighting.wgsl`. Verify the change with a green and non-green leaf test and the matched captures.
+- [x] Package as 0.4.0 and run `./tools/check.ps1 -Package`. Verify archive/source equivalence, shader translations, and GPU test results. Inspect the matched scene views. Record the fixture timings as whole-frame measurements. [Capture review](../../../validation/0.4.0/REVIEW.md)
+- [x] Update the roadmap status, README, tuning notes, and `docs/NEXT-SESSION.md`. Document the shared sky helper and leave height-dependent aerial perspective for milestone 2.

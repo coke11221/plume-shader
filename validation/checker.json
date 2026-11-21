@@ -1,0 +1,674 @@
+{
+  "upstream_revision": "0a875da91dbb0fdcb7ba8c42c11341aa229af51a",
+  "checks": [
+    {
+      "path": "source/default",
+      "ok": true,
+      "id": "plume_shader",
+      "version": "0.7.8",
+      "api": "0.2",
+      "sha256": "42f171808b276ea821bd4cbe4826ad0799287af0ac3ad73fc413e3832e7f2be7",
+      "stages": [
+        {
+          "stage": "sky",
+          "file": "sky.wgsl",
+          "label": "Directional sky",
+          "expressions": 3351,
+          "texture_reads": 11
+        },
+        {
+          "stage": "vertex",
+          "file": "vertex.wgsl",
+          "label": "Foliage wind",
+          "expressions": 3559,
+          "texture_reads": 11
+        },
+        {
+          "stage": "material",
+          "file": "material.wgsl",
+          "label": "Terrain and water",
+          "expressions": 8951,
+          "texture_reads": 26
+        },
+        {
+          "stage": "weather",
+          "file": "weather.wgsl",
+          "label": "Rain and snow",
+          "expressions": 3311,
+          "texture_reads": 11
+        },
+        {
+          "stage": "post",
+          "file": "post/reflections.wgsl",
+          "label": "Glossy surface reflections",
+          "expressions": 4035,
+          "texture_reads": 21
+        },
+        {
+          "stage": "post",
+          "file": "post/atmosphere.wgsl",
+          "label": "Volumetric sunlight",
+          "expressions": 4371,
+          "texture_reads": 28
+        },
+        {
+          "stage": "post",
+          "file": "post/contact_ao.wgsl",
+          "label": "Contact ambient occlusion",
+          "expressions": 3704,
+          "texture_reads": 16
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_extract.wgsl",
+          "label": "Bloom extraction",
+          "expressions": 3778,
+          "texture_reads": 22
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_horizontal.wgsl",
+          "label": "Bloom horizontal",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_vertical.wgsl",
+          "label": "Bloom vertical",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/composite.wgsl",
+          "label": "Atmosphere and bloom",
+          "expressions": 4695,
+          "texture_reads": 20
+        },
+        {
+          "stage": "post",
+          "file": "post/antialias.wgsl",
+          "label": "Edge smoothing",
+          "expressions": 3537,
+          "texture_reads": 23
+        },
+        {
+          "stage": "tonemap",
+          "file": "tonemap.wgsl",
+          "label": "Artistic grading and highlights",
+          "expressions": 3421,
+          "texture_reads": 12
+        },
+        {
+          "stage": "entity",
+          "file": "entity.wgsl",
+          "label": "Entity lighting",
+          "expressions": 6186,
+          "texture_reads": 21
+        }
+      ],
+      "problems": []
+    },
+    {
+      "path": "lite",
+      "ok": true,
+      "id": "plume_shader",
+      "version": "0.7.8",
+      "api": "0.2",
+      "sha256": "65015f530c58f84f779d4b6bc904cc853b09dbde8de07cc5d2cd102d181637d8",
+      "stages": [
+        {
+          "stage": "sky",
+          "file": "sky.wgsl",
+          "label": "Directional sky",
+          "expressions": 3351,
+          "texture_reads": 11
+        },
+        {
+          "stage": "vertex",
+          "file": "vertex.wgsl",
+          "label": "Foliage wind",
+          "expressions": 3559,
+          "texture_reads": 11
+        },
+        {
+          "stage": "material",
+          "file": "material.wgsl",
+          "label": "Terrain and water",
+          "expressions": 8951,
+          "texture_reads": 26
+        },
+        {
+          "stage": "weather",
+          "file": "weather.wgsl",
+          "label": "Rain and snow",
+          "expressions": 3311,
+          "texture_reads": 11
+        },
+        {
+          "stage": "post",
+          "file": "post/reflections.wgsl",
+          "label": "Glossy surface reflections",
+          "expressions": 4035,
+          "texture_reads": 21
+        },
+        {
+          "stage": "post",
+          "file": "post/atmosphere.wgsl",
+          "label": "Volumetric sunlight",
+          "expressions": 4371,
+          "texture_reads": 28
+        },
+        {
+          "stage": "post",
+          "file": "post/contact_ao.wgsl",
+          "label": "Contact ambient occlusion",
+          "expressions": 3704,
+          "texture_reads": 16
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_extract.wgsl",
+          "label": "Bloom extraction",
+          "expressions": 3778,
+          "texture_reads": 22
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_horizontal.wgsl",
+          "label": "Bloom horizontal",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_vertical.wgsl",
+          "label": "Bloom vertical",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/composite.wgsl",
+          "label": "Atmosphere and bloom",
+          "expressions": 4695,
+          "texture_reads": 20
+        },
+        {
+          "stage": "post",
+          "file": "post/antialias.wgsl",
+          "label": "Edge smoothing",
+          "expressions": 3537,
+          "texture_reads": 23
+        },
+        {
+          "stage": "tonemap",
+          "file": "tonemap.wgsl",
+          "label": "Artistic grading and highlights",
+          "expressions": 3421,
+          "texture_reads": 12
+        },
+        {
+          "stage": "entity",
+          "file": "entity.wgsl",
+          "label": "Entity lighting",
+          "expressions": 6186,
+          "texture_reads": 21
+        }
+      ],
+      "problems": []
+    },
+    {
+      "path": "balanced",
+      "ok": true,
+      "id": "plume_shader",
+      "version": "0.7.8",
+      "api": "0.2",
+      "sha256": "2691c336b2f58f4ec790926367cd656277405fe242039e754c353668e46ce570",
+      "stages": [
+        {
+          "stage": "sky",
+          "file": "sky.wgsl",
+          "label": "Directional sky",
+          "expressions": 3351,
+          "texture_reads": 11
+        },
+        {
+          "stage": "vertex",
+          "file": "vertex.wgsl",
+          "label": "Foliage wind",
+          "expressions": 3559,
+          "texture_reads": 11
+        },
+        {
+          "stage": "material",
+          "file": "material.wgsl",
+          "label": "Terrain and water",
+          "expressions": 8951,
+          "texture_reads": 26
+        },
+        {
+          "stage": "weather",
+          "file": "weather.wgsl",
+          "label": "Rain and snow",
+          "expressions": 3311,
+          "texture_reads": 11
+        },
+        {
+          "stage": "post",
+          "file": "post/reflections.wgsl",
+          "label": "Glossy surface reflections",
+          "expressions": 4035,
+          "texture_reads": 21
+        },
+        {
+          "stage": "post",
+          "file": "post/atmosphere.wgsl",
+          "label": "Volumetric sunlight",
+          "expressions": 4371,
+          "texture_reads": 28
+        },
+        {
+          "stage": "post",
+          "file": "post/contact_ao.wgsl",
+          "label": "Contact ambient occlusion",
+          "expressions": 3704,
+          "texture_reads": 16
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_extract.wgsl",
+          "label": "Bloom extraction",
+          "expressions": 3778,
+          "texture_reads": 22
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_horizontal.wgsl",
+          "label": "Bloom horizontal",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_vertical.wgsl",
+          "label": "Bloom vertical",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/composite.wgsl",
+          "label": "Atmosphere and bloom",
+          "expressions": 4695,
+          "texture_reads": 20
+        },
+        {
+          "stage": "post",
+          "file": "post/antialias.wgsl",
+          "label": "Edge smoothing",
+          "expressions": 3537,
+          "texture_reads": 23
+        },
+        {
+          "stage": "tonemap",
+          "file": "tonemap.wgsl",
+          "label": "Artistic grading and highlights",
+          "expressions": 3421,
+          "texture_reads": 12
+        },
+        {
+          "stage": "entity",
+          "file": "entity.wgsl",
+          "label": "Entity lighting",
+          "expressions": 6186,
+          "texture_reads": 21
+        }
+      ],
+      "problems": []
+    },
+    {
+      "path": "high",
+      "ok": true,
+      "id": "plume_shader",
+      "version": "0.7.8",
+      "api": "0.2",
+      "sha256": "be7a9e318840289ea0e1eea90b79484004c15eb6f28cc49a29e38f506cbedd65",
+      "stages": [
+        {
+          "stage": "sky",
+          "file": "sky.wgsl",
+          "label": "Directional sky",
+          "expressions": 3351,
+          "texture_reads": 11
+        },
+        {
+          "stage": "vertex",
+          "file": "vertex.wgsl",
+          "label": "Foliage wind",
+          "expressions": 3559,
+          "texture_reads": 11
+        },
+        {
+          "stage": "material",
+          "file": "material.wgsl",
+          "label": "Terrain and water",
+          "expressions": 8951,
+          "texture_reads": 26
+        },
+        {
+          "stage": "weather",
+          "file": "weather.wgsl",
+          "label": "Rain and snow",
+          "expressions": 3311,
+          "texture_reads": 11
+        },
+        {
+          "stage": "post",
+          "file": "post/reflections.wgsl",
+          "label": "Glossy surface reflections",
+          "expressions": 4035,
+          "texture_reads": 21
+        },
+        {
+          "stage": "post",
+          "file": "post/atmosphere.wgsl",
+          "label": "Volumetric sunlight",
+          "expressions": 4371,
+          "texture_reads": 28
+        },
+        {
+          "stage": "post",
+          "file": "post/contact_ao.wgsl",
+          "label": "Contact ambient occlusion",
+          "expressions": 3704,
+          "texture_reads": 16
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_extract.wgsl",
+          "label": "Bloom extraction",
+          "expressions": 3778,
+          "texture_reads": 22
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_horizontal.wgsl",
+          "label": "Bloom horizontal",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_vertical.wgsl",
+          "label": "Bloom vertical",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/composite.wgsl",
+          "label": "Atmosphere and bloom",
+          "expressions": 4695,
+          "texture_reads": 20
+        },
+        {
+          "stage": "post",
+          "file": "post/antialias.wgsl",
+          "label": "Edge smoothing",
+          "expressions": 3537,
+          "texture_reads": 23
+        },
+        {
+          "stage": "tonemap",
+          "file": "tonemap.wgsl",
+          "label": "Artistic grading and highlights",
+          "expressions": 3421,
+          "texture_reads": 12
+        },
+        {
+          "stage": "entity",
+          "file": "entity.wgsl",
+          "label": "Entity lighting",
+          "expressions": 6186,
+          "texture_reads": 21
+        }
+      ],
+      "problems": []
+    },
+    {
+      "path": "ultra",
+      "ok": true,
+      "id": "plume_shader",
+      "version": "0.7.8",
+      "api": "0.2",
+      "sha256": "9028c038912c4d9df471829b94e24ae9719bbc80a303224bc53bed5b0a856306",
+      "stages": [
+        {
+          "stage": "sky",
+          "file": "sky.wgsl",
+          "label": "Directional sky",
+          "expressions": 3351,
+          "texture_reads": 11
+        },
+        {
+          "stage": "vertex",
+          "file": "vertex.wgsl",
+          "label": "Foliage wind",
+          "expressions": 3559,
+          "texture_reads": 11
+        },
+        {
+          "stage": "material",
+          "file": "material.wgsl",
+          "label": "Terrain and water",
+          "expressions": 8951,
+          "texture_reads": 26
+        },
+        {
+          "stage": "weather",
+          "file": "weather.wgsl",
+          "label": "Rain and snow",
+          "expressions": 3311,
+          "texture_reads": 11
+        },
+        {
+          "stage": "post",
+          "file": "post/reflections.wgsl",
+          "label": "Glossy surface reflections",
+          "expressions": 4035,
+          "texture_reads": 21
+        },
+        {
+          "stage": "post",
+          "file": "post/atmosphere.wgsl",
+          "label": "Volumetric sunlight",
+          "expressions": 4371,
+          "texture_reads": 28
+        },
+        {
+          "stage": "post",
+          "file": "post/contact_ao.wgsl",
+          "label": "Contact ambient occlusion",
+          "expressions": 3704,
+          "texture_reads": 16
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_extract.wgsl",
+          "label": "Bloom extraction",
+          "expressions": 3778,
+          "texture_reads": 22
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_horizontal.wgsl",
+          "label": "Bloom horizontal",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_vertical.wgsl",
+          "label": "Bloom vertical",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/composite.wgsl",
+          "label": "Atmosphere and bloom",
+          "expressions": 4695,
+          "texture_reads": 20
+        },
+        {
+          "stage": "post",
+          "file": "post/antialias.wgsl",
+          "label": "Edge smoothing",
+          "expressions": 3537,
+          "texture_reads": 23
+        },
+        {
+          "stage": "tonemap",
+          "file": "tonemap.wgsl",
+          "label": "Artistic grading and highlights",
+          "expressions": 3421,
+          "texture_reads": 12
+        },
+        {
+          "stage": "entity",
+          "file": "entity.wgsl",
+          "label": "Entity lighting",
+          "expressions": 6186,
+          "texture_reads": 21
+        }
+      ],
+      "problems": []
+    },
+    {
+      "path": "distribution",
+      "ok": true,
+      "id": "plume_shader",
+      "version": "0.7.8",
+      "api": "0.2",
+      "sha256": "42f171808b276ea821bd4cbe4826ad0799287af0ac3ad73fc413e3832e7f2be7",
+      "stages": [
+        {
+          "stage": "sky",
+          "file": "sky.wgsl",
+          "label": "Directional sky",
+          "expressions": 3351,
+          "texture_reads": 11
+        },
+        {
+          "stage": "vertex",
+          "file": "vertex.wgsl",
+          "label": "Foliage wind",
+          "expressions": 3559,
+          "texture_reads": 11
+        },
+        {
+          "stage": "material",
+          "file": "material.wgsl",
+          "label": "Terrain and water",
+          "expressions": 8951,
+          "texture_reads": 26
+        },
+        {
+          "stage": "weather",
+          "file": "weather.wgsl",
+          "label": "Rain and snow",
+          "expressions": 3311,
+          "texture_reads": 11
+        },
+        {
+          "stage": "post",
+          "file": "post/reflections.wgsl",
+          "label": "Glossy surface reflections",
+          "expressions": 4035,
+          "texture_reads": 21
+        },
+        {
+          "stage": "post",
+          "file": "post/atmosphere.wgsl",
+          "label": "Volumetric sunlight",
+          "expressions": 4371,
+          "texture_reads": 28
+        },
+        {
+          "stage": "post",
+          "file": "post/contact_ao.wgsl",
+          "label": "Contact ambient occlusion",
+          "expressions": 3704,
+          "texture_reads": 16
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_extract.wgsl",
+          "label": "Bloom extraction",
+          "expressions": 3778,
+          "texture_reads": 22
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_horizontal.wgsl",
+          "label": "Bloom horizontal",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/bloom_vertical.wgsl",
+          "label": "Bloom vertical",
+          "expressions": 3389,
+          "texture_reads": 18
+        },
+        {
+          "stage": "post",
+          "file": "post/composite.wgsl",
+          "label": "Atmosphere and bloom",
+          "expressions": 4695,
+          "texture_reads": 20
+        },
+        {
+          "stage": "post",
+          "file": "post/antialias.wgsl",
+          "label": "Edge smoothing",
+          "expressions": 3537,
+          "texture_reads": 23
+        },
+        {
+          "stage": "tonemap",
+          "file": "tonemap.wgsl",
+          "label": "Artistic grading and highlights",
+          "expressions": 3421,
+          "texture_reads": 12
+        },
+        {
+          "stage": "entity",
+          "file": "entity.wgsl",
+          "label": "Entity lighting",
+          "expressions": 6186,
+          "texture_reads": 21
+        }
+      ],
+      "problems": []
+    }
+  ],
+  "package_contract_tests_passed": true,
+  "backends": [
+    "SPIR-V (Vulkan)",
+    "MSL (Metal)",
+    "HLSL (DirectX)"
+  ],
+  "official_checker_option_sets": [
+    "defaults",
+    "all minimums",
+    "all maximums"
+  ],
+  "full_pack_runtime_visual_verified": false,
+  "full_pack_runtime_report": "0.7.8/runtime.json",
+  "performance_measured": false,
+  "comparative_shader_overhead_measured": false
+}

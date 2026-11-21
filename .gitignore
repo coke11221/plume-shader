@@ -1,0 +1,13 @@
+.tools/
+backups/
+__pycache__/
+*.pyc
+showcase/prepared-shots/
+dist/horizon_lighting-*.hshader
+dist/horizon_lighting_compat-*.hshader
+dist/horizon-round-moon.zip
+validation/*/
+validation/*.json
+validation/*.md
+validation/*.txt
+!validation/checker.json
