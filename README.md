@@ -2,7 +2,7 @@
 
 ![Plume Shader cover](showcase/chosen-shots/main-cover.png)
 
-A standalone **raster-only** shader pack for Horizon Rust Minecraft (`plume_shader`, **Beta**) with golden-hour sunlight, volumetric clouds, directional sky and aerial haze, colored volumetric block lights, colored dynamic lighting, waving foliage, sun shafts, wet and polished surfaces, planar water mirror + SSR, custom rain and snow, bloom, and optional edge smoothing. Ordinary Minecraft textures are enough. See [TUNING.md](TUNING.md) for palette and effect controls.
+A standalone **raster-only** shader pack for Horizon Rust Minecraft (`plume_shader`, **Beta**) with golden-hour sunlight, volumetric clouds, directional sky and aerial haze, colored volumetric block lights, colored dynamic lighting, waving foliage, sun shafts, wet and polished surfaces, planar water mirror + SSR, custom rain and snow, bloom, and optional edge smoothing. Ordinary Minecraft textures are enough.
 
 ## Showcase
 
@@ -108,7 +108,7 @@ The 0.3.5 captures cover the Overworld, Nether and End on the November 16 client
 
 The 0.3.6 captures compare the underwater effect on and off and show what happens when a solid roof blocks the sun. [Water validation and captures](validation/0.3.6/REVIEW.md)
 
-The 0.4.0 captures compare the directional sky and natural greens against 0.3.9. The 0.4.2 captures compare rain, low-sun terrain, shorelines, and submerged views against 0.4.1. [Sky validation](validation/0.4.0/REVIEW.md) · [Rain and haze validation](validation/0.4.2/REVIEW.md) · [Next-session handoff](docs/NEXT-SESSION.md)
+The 0.4.0 captures compare the directional sky and natural greens against 0.3.9. The 0.4.2 captures compare rain, low-sun terrain, shorelines, and submerged views against 0.4.1. [Sky validation](validation/0.4.0/REVIEW.md) · [Rain and haze validation](validation/0.4.2/REVIEW.md)
 
 ![Golden sunset and polished surfaces on the RTX 4050](validation/golden/shafts.png)
 
@@ -123,6 +123,6 @@ The 0.4.0 captures compare the directional sky and natural greens against 0.3.9.
 
 ## Layout
 
-`horizon_lighting/` is the complete pack source; `dist/` holds the installable archive; `tools/` contains validation scripts; `tests/` checks distribution contracts; `validation/` holds machine-readable evidence. Design and implementation notes live in `docs/superpowers/`.
+`horizon_lighting/` is the complete pack source; `dist/` holds the installable archive; `tools/` contains validation scripts; `tests/` checks distribution contracts; `validation/` holds machine-readable evidence.
 
 References: [authoring guide](https://github.com/horizon-rust/horizon/blob/0a875da91dbb0fdcb7ba8c42c11341aa229af51a/docs/api/shaders.md), [API reference](https://github.com/horizon-rust/horizon/blob/0a875da91dbb0fdcb7ba8c42c11341aa229af51a/docs/api/shaders-reference-0.2.md).
